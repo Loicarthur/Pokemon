@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  reactStrictMode: true,
+  // Configuration pour les images distantes des pokémons
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
+  // Autres configurations
 };
-
-export default nextConfig;
