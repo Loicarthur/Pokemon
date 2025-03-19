@@ -4,6 +4,9 @@ import { PokemonList } from "@/types/pokemon";
 
 async function getPokemonList() {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+  // appel de l'API avec un seul pokemon pour tester
+  // const res = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+  
   if (!res.ok) throw new Error("Failed to fetch Pokemon");
   return res.json() as Promise<PokemonList>;
 }
